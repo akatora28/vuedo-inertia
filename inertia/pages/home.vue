@@ -11,7 +11,7 @@ defineProps<{ version: number }>()
     <div class="title">AdonisJS {{ version }} x Inertia x Vue.js</div>
 
     <span>
-      Learn more about AdonisJS and Inertia.js by visiting the
+      <p>Learn more about AdonisJS and Inertia.js by visiting the</p>
       <a href="https://docs.adonisjs.com/guides/inertia">AdonisJS documentation</a>.
     </span>
   </div>

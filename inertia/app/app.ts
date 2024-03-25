@@ -1,4 +1,4 @@
-import '../css/app.css';
+import '../css/app.css'
 import { createApp, h } from 'vue'
 import type { DefineComponent } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
@@ -19,9 +19,9 @@ createInertiaApp({
   },
 
   setup({ el, App, props, plugin }) {
-    
+
     createApp({ render: () => h(App, props) })
-    
+
       .use(plugin)
       .mount(el)
   },
