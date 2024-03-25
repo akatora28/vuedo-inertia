@@ -1,5 +1,31 @@
+<script>
+import { Head } from '@inertiajs/vue3'
+
+export default {
+  data() {
+    return {
+      isLogin: true,
+      user: {
+        email: '',
+        password: '',
+      },
+    };
+  },
+  methods: {
+    toggleForm() {
+      this.isLogin = !this.isLogin;
+    },
+    handleSubmit() {
+      // Implement authentication logic here
+      console.log('Form Submitted', this.user);
+    },
+  },
+};
+</script>
+
 <template>
-  <div class="min-h-screen flex flex-col justify-center items-center bg-gray-100">
+  <Head title="Sign In" />
+  <div class="min-h-screen flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-700">
     <div class="w-full max-w-xs">
       <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" @submit.prevent="handleSubmit">
         <div class="mb-4">
@@ -26,26 +52,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      isLogin: true,
-      user: {
-        email: '',
-        password: '',
-      },
-    };
-  },
-  methods: {
-    toggleForm() {
-      this.isLogin = !this.isLogin;
-    },
-    handleSubmit() {
-      // Implement authentication logic here
-      console.log('Form Submitted', this.user);
-    },
-  },
-};
-</script>
