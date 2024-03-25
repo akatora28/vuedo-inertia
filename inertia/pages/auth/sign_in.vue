@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { Head } from '@inertiajs/vue3'
-
-import { usePage, useForm } from '@inertiajs/vue3'
+import { Head, Link, useForm, usePage  } from '@inertiajs/vue3'
 
 const props = usePage().props
 
@@ -70,8 +68,8 @@ console.log(form)
             Login
           </button>
         </div>
-        <div class="flex">
-          <p class="text-xs">Need an account? Register here</p>
+        <div class="flex items-center mt-2">
+          <Link :href="`/auth/register`" class="text-xs text-blue-500 hover:text-blue-300">Need an account? Register here</Link>
         </div>
       </form>
     </div>
