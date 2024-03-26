@@ -34,3 +34,6 @@ router
     router.get('/', [DashboardController, 'show'])
   })
   .use(middleware.auth())
+
+// Final catch-all - Make an Inertia 404?
+router.on('/*').redirect('/')
