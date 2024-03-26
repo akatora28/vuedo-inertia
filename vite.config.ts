@@ -17,8 +17,9 @@ export default defineConfig({
    */
   resolve: {
     alias: {
-      '@/': `${getDirname(import.meta.url)}/resources/`,
-      '~/': `${getDirname(import.meta.url)}/inertia/`,
+      '@/': `${getDirname(import.meta.url)}/inertia/`,
+      '@/layouts': `${getDirname(import.meta.url)}/inertia/layouts/`,
+      // '~/': `${getDirname(import.meta.url)}/inertia/`,
     },
   },
 })
